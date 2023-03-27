@@ -4,7 +4,7 @@ class ExamplePagesController < ApplicationController
   end
 
   def time
-    time1 = Time.new
-    render json: { time: "Current Time : " + time1.inspect }
+    current_time = Time.now.strftime("%b %e, %l:%M %p")
+    render json: { time: "Current Time : " + current_time }
   end
 end
