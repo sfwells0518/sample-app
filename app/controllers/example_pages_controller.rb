@@ -7,4 +7,8 @@ class ExamplePagesController < ApplicationController
     current_time = Time.now.strftime("%b %e, %l:%M %p")
     render json: { time: "Current Time : " + current_time }
   end
+
+  def drink
+    render json: { message: "have some water" }
+  end
 end
